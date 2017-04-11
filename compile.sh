@@ -1,6 +1,6 @@
 #!/bin/sh
-KERNEL=linux-3.18.29
-RT=patch-3.18.29-rt30
+KERNEL=linux-3.18.48
+RT=patch-3.18.48-rt54
 cd ${KERNEL}-rt
 export CONCURRENCY_LEVEL=4
 make-kpkg clean
