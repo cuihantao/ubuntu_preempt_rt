@@ -1,6 +1,6 @@
 #!/bin/sh
-KERNEL=linux-3.18.29
-RT=patch-3.18.29-rt30
+KERNEL=linux-3.18.48
+RT=patch-3.18.48-rt54
 KERNEL_SRC=https://www.kernel.org/pub/linux/kernel/v3.x/${KERNEL}.tar.xz
 RT_PATCH_SRC=https://www.kernel.org/pub/linux/kernel/projects/rt/3.18/${RT}.patch.xz
 
