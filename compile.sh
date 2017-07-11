@@ -1,8 +1,11 @@
 #!/bin/sh
-KERNEL=linux-3.18.48
-RT=patch-3.18.48-rt54
+KERNEL=linux-4.8.15
+RT=patch-4.8.15-rt10
+
+type make-kpkg >/dev/null 2>&1 || { echo >&2 "make-kpkg does not exist. Trying to insatll..."; sudo apt install kernel-package;} 
+
 cd ${KERNEL}-rt
-export CONCURRENCY_LEVEL=4
+
 make-kpkg clean
-sudo time make-kpkg --initrd --revision=0 kernel_image kernel_headers
+sudo time make-kpkg -j`getconf _NPROCESSORS_ONLN` --initrd --revision=0 kernel_image kernel_headers
 cd ..
