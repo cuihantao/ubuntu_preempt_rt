@@ -2,7 +2,7 @@
 KERNEL=linux-4.8.15
 RT=patch-4.8.15-rt10
 
-type make-kpkg >/dev/null 2>&1 || { echo >&2 "make-kpkg does not exist. Trying to insatll..."; sudo apt install kernel-package;} 
+type make-kpkg >/dev/null 2>&1 || { echo >&2 "make-kpkg does not exist. Trying to insatll..."; sudo apt install kernel-package libssl-dev;} 
 
 cd ${KERNEL}-rt
 
